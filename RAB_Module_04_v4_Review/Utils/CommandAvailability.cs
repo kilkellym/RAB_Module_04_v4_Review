@@ -12,12 +12,12 @@ namespace RAB_Module_04_v4_Review
     {
         public bool IsCommandAvailable(UIApplication applicationData, CategorySet selectedCategories)
         {
-            bool result = true;
-            //UIDocument activeDoc = applicationData.ActiveUIDocument;
-            //if (activeDoc != null && activeDoc.Document != null)
-            //{
-            //    result = true;
-            //}
+            bool result = false;
+            UIDocument activeDoc = applicationData.ActiveUIDocument;
+            if (activeDoc != null && activeDoc.Document != null)
+            {
+                result = true;
+            }
 
             return result;
         }
